@@ -1,0 +1,17 @@
+{"arquitetura":"camadas","cenario":"Tag de referencia empacotada","resultado":"PASSOU","detalhe":"c357422db26f822912d201eb734775f049ef5126"}
+{"arquitetura": "camadas", "fase": "comum", "cenario": "A1 produto CRUD e exclusao logica", "resultado": "PASSOU"}
+{"arquitetura": "camadas", "fase": "comum", "cenario": "A2 estoque cadastro, entrada, saida e conflitos", "resultado": "PASSOU"}
+{"arquitetura": "camadas", "fase": "comum", "cenario": "A3 criar sem estoque e acima do saldo", "resultado": "PASSOU"}
+{"arquitetura": "camadas", "fase": "comum", "cenario": "A4 incluir, preservar historico, alterar, remover", "resultado": "PASSOU"}
+{"arquitetura": "camadas", "fase": "comum", "cenario": "A5 cancelar, consultar, listar e bloquear alteracoes", "resultado": "PASSOU"}
+{"arquitetura": "camadas", "fase": "diferencas", "preco_11_digitos": 201, "nome_devolvido": "  Espacos  ", "id_zero": 400, "lista_observada_crescente": true, "ids": [2, 3, 4, 5]}
+{"arquitetura": "camadas", "fase": "diferencas", "cenario": "B sondas de comparabilidade", "resultado": "PASSOU"}
+{"arquitetura":"modular","cenario":"Tag de referencia empacotada","resultado":"PASSOU","detalhe":"0458dc5490a11113ca09b9617ed8dab1b83c47a6"}
+{"arquitetura": "modular", "fase": "comum", "cenario": "A1 produto CRUD e exclusao logica", "resultado": "PASSOU"}
+{"arquitetura": "modular", "fase": "comum", "cenario": "A2 estoque cadastro, entrada, saida e conflitos", "resultado": "PASSOU"}
+{"arquitetura": "modular", "fase": "comum", "cenario": "A3 criar sem estoque e acima do saldo", "resultado": "PASSOU"}
+{"arquitetura": "modular", "fase": "comum", "cenario": "A4 incluir, preservar historico, alterar, remover", "resultado": "PASSOU"}
+{"arquitetura": "modular", "fase": "comum", "cenario": "A5 cancelar, consultar, listar e bloquear alteracoes", "resultado": "PASSOU"}
+{"arquitetura": "modular", "fase": "diferencas", "preco_11_digitos": 400, "nome_devolvido": "Espacos", "id_zero": 404, "lista_observada_crescente": true, "ids": [2, 3, 4]}
+{"arquitetura": "modular", "fase": "diferencas", "cenario": "B sondas de comparabilidade", "resultado": "PASSOU"}
+{"arquitetura":"modular","cenario":"Execucao completa","resultado":"PASSOU","detalhe":"Referencias"}

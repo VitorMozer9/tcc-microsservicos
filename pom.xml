@@ -1,0 +1,76 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>4.1.2</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>com.github.vitormozer9</groupId>
+    <artifactId>tcc-microsservicos</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>produto-service</module>
+        <module>estoque-service</module>
+        <module>pedido-service</module>
+    </modules>
+
+    <properties>
+        <java.version>21</java.version>
+        <maven.compiler.release>21</maven.compiler.release>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.tngtech.archunit</groupId>
+            <artifactId>archunit</artifactId>
+            <version>1.4.2</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <version>3.6.2</version>
+                <executions>
+                    <execution>
+                        <id>isolar-servicos</id>
+                        <goals><goal>enforce</goal></goals>
+                        <configuration>
+                            <rules>
+                                <bannedDependencies>
+                                    <excludes><exclude>com.github.vitormozer9:*-service</exclude></excludes>
+                                    <searchTransitive>true</searchTransitive>
+                                </bannedDependencies>
+                            </rules>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>3.6.1</version>
+                <executions>
+                    <execution>
+                        <id>testes-de-arquitetura</id>
+                        <phase>generate-test-sources</phase>
+                        <goals><goal>add-test-source</goal></goals>
+                        <configuration>
+                            <sources><source>${project.basedir}/../tests/architecture</source></sources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
